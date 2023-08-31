@@ -92,6 +92,23 @@ button {
   line-height: 24px;
   letter-spacing: 0.32px;
   padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-link::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: transparent;
+  transform: translate(0, 10px);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-link:focus::after,
+.navigation-link:hover::after {
+  background-color: #4d5ae5;
 }
 
 .navigation-link:focus,
@@ -104,6 +121,7 @@ button {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list {
@@ -122,6 +140,15 @@ button {
 
 .hero {
   background-color: #2e2f42;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -151,6 +178,7 @@ button {
   padding: 16px 32px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:focus,
@@ -183,6 +211,19 @@ button {
 
 .advantage-item {
   width: calc((100% - (24px * 3)) / 4);
+}
+
+.advantage-icon {
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #f4f4fd;
 }
 
 .advantage-title {
@@ -244,6 +285,8 @@ button {
 .team-descr {
   padding-top: 32px;
   padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .team-name {
@@ -262,6 +305,29 @@ button {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.32px;
+  margin-bottom: 8px;
+}
+
+.team-social-links-list {
+  display: flex;
+  gap: 24px;
+  justify-content: space-evenly;
+}
+
+.team-social-links-item {
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  fill: #f4f4fd;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-social-links-item:hover,
+.team-social-links-item:focus {
+  background-color: #404bbf;
 }
 
 .portfolio {
@@ -284,6 +350,18 @@ button {
   width: calc((100% - 48px) / 3);
   background-color: #fff;
   border-top: none;
+}
+
+.porfilio-image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-img {
@@ -311,6 +389,29 @@ button {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.32px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  font-size: 16px;
+  color: #f4f4fd;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .overlay {
+  transform: translateY(0);
 }
 
 .footer {
@@ -342,4 +443,42 @@ button {
   line-height: 24px;
   letter-spacing: 0.32px;
   width: 264px;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer-social-links {
+  margin-left: 120px;
+}
+
+.footer-social-links-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  margin-bottom: 16px;
+}
+
+.footer-social-links-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-links-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  fill: #f4f4fd;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-links-item:hover,
+.footer-social-links-item:focus {
+  background-color: #31d0aa;
 }
