@@ -89,11 +89,12 @@ button {
 }
 
 .navigation-item {
-  position: relative;
   color: #404bbf;
 }
 
 .navigation-link {
+  position: relative;
+  color: #2e2f42;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -111,14 +112,12 @@ button {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: transparent;
-  transform: translate(0, 10px);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:focus::after,
 .navigation-link:hover::after {
-  background-color: #4d5ae5;
+  background-color: #404bbf;
 }
 
 .navigation-link:focus,
@@ -131,7 +130,6 @@ button {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.32px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list {
@@ -141,6 +139,7 @@ button {
 
 .contacts-link {
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts a:focus,
